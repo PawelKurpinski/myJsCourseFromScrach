@@ -110,3 +110,22 @@ var clickButton = document.getElementById('test');
 function doIt(){
     clickButton.innerHTML = ("ala ma kota");
 };
+
+var osoba = {
+    imie: "Paweł",
+    nazwisko: "Kurpinski",
+    pobierzInformacje: function(){
+        return this.imie + " " + this.nazwisko;
+     }
+}
+
+document.write = (osoba.imie);
+clickButton.innerHTML = (osoba.nazwisko = "Inne");
+
+var clickButton2 = document.getElementById('test2');
+
+function doItOneMoreTime(){
+    clickButton2.innerHTML = ("Milicjant ma...");
+};
+
+clickButton.innerHTML = osoba.pobierzInformacje();
