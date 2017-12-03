@@ -129,3 +129,19 @@ function doItOneMoreTime(){
 };
 
 clickButton.innerHTML = osoba.pobierzInformacje();
+
+var czlowiek = {
+    imie: Pawel,
+    nazwisko: Kowalski,
+    metoda: function(){
+        return this.zazwisko + " " + this.imie;
+    }
+};
+
+
+var ja = new Object{
+    imie: Piotr,
+    nazwisko: Kowal,
+    metoda: function(){
+        return this.zazwisko + " " + this.imie;
+}
