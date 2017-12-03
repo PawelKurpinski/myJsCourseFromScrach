@@ -130,6 +130,8 @@ function doItOneMoreTime(){
 
 clickButton.innerHTML = osoba.pobierzInformacje();
 
+// Zapis I
+
 var czlowiek = {
     imie: Pawel,
     nazwisko: Kowalski,
@@ -138,15 +140,19 @@ var czlowiek = {
     }
 };
 
+// Zapis II
 
 var ja = new Object{
     imie: Piotr,
     nazwisko: Kowal,
     metoda: function(){
         return this.zazwisko + " " + this.imie;
-}
+    }
+};
 
 // inna możliwość to funkcja konstruująca czyli odpowiednik klasy
+
+// Zapis III
 
 function person(name, surname){
     this.imie = name,
@@ -159,7 +165,7 @@ function person(name, surname){
 var x = new person("Paweł", "Kurpinski");
 var y = new person("Piort", "Kurpiński");
 
-x.newValue = 12;  /*to nowy klucz w obiekcie person */
+x.newValue = 12;  /*to nowy klucz i wartość w obiekcie person */
 
 /*uwaga! zamiast dopisywać element w samej klasie czyli inaczej mówiąc samej funkcji konkstruktora można zrobić to też korzystając z prototypu*/
 
