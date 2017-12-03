@@ -157,5 +157,12 @@ function person(name, surname){
 }
 
 var x = new person("Paweł", "Kurpinski");
+var y = new person("Piort", "Kurpiński");
 
-x.newValue = 12;
+x.newValue = 12;  /*to nowy klucz w obiekcie person */
+
+/*uwaga! zamiast dopisywać element w samej klasie czyli inaczej mówiąc samej funkcji konkstruktora można zrobić to też korzystając z prototypu*/
+
+person.prototype.specifiedValue = 12;
+
+/* kluczem jest fakt iż teraz zarówno x jaki i r otrzymują tęn klucz a nie tylko x lub y jak w konstrukcji z "new"*/
