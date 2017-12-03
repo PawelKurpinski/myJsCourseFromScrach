@@ -145,3 +145,17 @@ var ja = new Object{
     metoda: function(){
         return this.zazwisko + " " + this.imie;
 }
+
+// inna możliwość to funkcja konstruująca czyli odpowiednik klasy
+
+function person(name, surname){
+    this.imie = name,
+    this.nazwisko = surname,
+    this.toString = function(){
+        return this.name + " " + this.surname;
+    };
+}
+
+var x = new person("Paweł", "Kurpinski");
+
+x.newValue = 12;
