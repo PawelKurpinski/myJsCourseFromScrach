@@ -209,3 +209,13 @@ alert(osoba["imie"]);
 alert(osoba.imie);
 
 var ul = document.getElementById('kursyTworzeniaStronWww');
+var liArray = ul.getElementsByTagName("li");
+
+alert(liArray[1]);
+// by zobaczyć dokładną zawartość danej komórki tablicy można posłużyć się innerHTML
+alert(liArray[1].innerHTML);
+
+// ale w skrócie można też napisać tak
+
+var liArray2 = document.getElementById("kursyTworzeniaStronWww").getElementsByTagName("li");
+alert(liArray2[2].innerHTML);
