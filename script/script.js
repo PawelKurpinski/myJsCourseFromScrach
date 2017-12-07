@@ -182,40 +182,59 @@ var produkty = [
     "JS"
 ];
 
-alert(produkty[0]);
-alert(produkty.length); /* teraz 3 */
-
-// by dodać nową pozycję do obiektu tablicy można
-produkty[produkty.length] = "C++";
-alert(produkty[3]);
-
-alert(produkty.length); /* teraz już 4 */
-
-// inny sposób dodania na koniec tablicy
-produkty.push("C#");
-alert(produkty);
-
-// II sposób analogicznie do obiektów - ale nie jest polecany ze względu na mniejszą szybkość działania
-var produkty = new Array();
-
-// Ważne pojęcie to tablice asocjacyjne - przuporządkowujące klucz i wartosć; kluczem jest nazwa nie liczba
-
-var osoba = [];
-
-osoba["imie"] = "Pawel";
-
-alert(osoba["imie"]);
-// lub
-alert(osoba.imie);
-
-var ul = document.getElementById('kursyTworzeniaStronWww');
-var liArray = ul.getElementsByTagName("li");
-
-alert(liArray[1]);
-// by zobaczyć dokładną zawartość danej komórki tablicy można posłużyć się innerHTML
-alert(liArray[1].innerHTML);
-
-// ale w skrócie można też napisać tak
+// alert(produkty[0]);
+// alert(produkty.length); /* teraz 3 */
+//
+// // by dodać nową pozycję do obiektu tablicy można
+// produkty[produkty.length] = "C++";
+// alert(produkty[3]);
+//
+// alert(produkty.length); /* teraz już 4 */
+//
+// // inny sposób dodania na koniec tablicy
+// produkty.push("C#");
+// alert(produkty);
+//
+// // II sposób analogicznie do obiektów - ale nie jest polecany ze względu na mniejszą szybkość działania
+// var produkty = new Array();
+//
+// // Ważne pojęcie to tablice asocjacyjne - przuporządkowujące klucz i wartosć; kluczem jest nazwa nie liczba
+//
+// var osoba = [];
+//
+// osoba["imie"] = "Pawel";
+//
+// alert(osoba["imie"]);
+// // lub
+// alert(osoba.imie);
+//
+// var ul = document.getElementById('kursyTworzeniaStronWww');
+// var liArray = ul.getElementsByTagName("li");
+//
+// alert(liArray[1]);
+// // by zobaczyć dokładną zawartość danej komórki tablicy można posłużyć się innerHTML
+// alert(liArray[1].innerHTML);
+//
+// // ale w skrócie można też napisać tak
 
 var liArray2 = document.getElementById("kursyTworzeniaStronWww").getElementsByTagName("li");
 alert(liArray2[2].innerHTML);
+
+var temp = ["MySQli", "Wanila JS"];
+
+document.getElementById("rezultat").innerHTML = produkty.concat(temp);
+// poprzez concat dodaję do siebie dwie tablice co widać na stronie w związku z wyświetleniem produktów
+
+document.getElementById("rezultat").innerHTML += "<br>--------------------<br>";
+// to ciekawy sposób na wstawienie linii przerywanej za pomocą metody innerHTML
+
+document.getElementById("rezultat").innerHTML += produkty;
+// w ten sposób wyświetlam na stronie zawartość tablicy czyli niejako dodaję do poprzez +=
+
+document.getElementById("rezultat").innerHTML += produkty.join("-----x------");
+// co ważne! join nie zmienia zawartości produktów tylko ta konkretna sytuacja wyświetla modyfikację
+
+document.getElementById("rezultat").innerHTML += produkty.sort();
+
+// document.getElementById("rezultat").innerHTML = produkty.shift();
+// zapis pozwalający na usunięcie z wyśietlania pierwszego elementu z listy
