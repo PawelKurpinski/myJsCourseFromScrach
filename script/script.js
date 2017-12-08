@@ -176,6 +176,21 @@
 
 /*-----------Tablice-------------------------------*/
 
+/*
+uyteczne metody tymczasowo zmieniające tablice:
+a) concat - łaczy ze sobą dwie tablice;
+b) join - połączenie tablicy np. z ("<br>"), "----" itp.
+c) pop - usunięcie ostatniego elementu z tablicy i jego zwrócenie,
+d) push - dodanie na koniec tablcy nowego elementu i zwrot długośći tablicy;
+e) shift - usunięcie pierwszego elementu z tablicy,
+f) unshift - przesuwa zawartość tablicy o 1 oraz dodanie na początku tablicy nowego elementu i zwrot liczby elem.
+g) sort - sortowanie wg alfabetu
+h) sort(function(a,b) {return a-b}) - sortowanie liczb
+i) slice - krojenie tabeli od do np. <1, 3] czuli od 1 ale bez niego do 3-ciego włączenie
+j) splice - UWAGA! ingeruje w pierwotną tablicę - usuwanie od eleme np. 2 oraz lcizba elem. do usunięcia
+
+
+    h.2 zaraz po tym można zastosować reverse
 var produkty = [
     "PHP",
     "Mysql",
@@ -238,3 +253,21 @@ document.getElementById("rezultat").innerHTML += produkty.sort();
 
 // document.getElementById("rezultat").innerHTML = produkty.shift();
 // zapis pozwalający na usunięcie z wyśietlania pierwszego elementu z listy
+
+document.getElementById("rezultat").innerHTML = produkty.pop();
+
+document.getElementById("rezultat").innerHTML = produkty.push("nowy_element");
+
+document.getElementById("rezultat").innerHTML = produkty.sort();
+// sortowanie alfabetyczne
+produkty.reverse();
+// odwrócenie sortowania
+
+document.getElementById("rezultat").innerHTML = produkty.sort(function(a, b){return a - b});
+// lub b - a sortowanie liczb
+
+document.getElementById("rezultat").innerHTML = produkty.slice(1, 3);
+// wykrojenie określonych elementów z tablicy
+
+document.getElementById("rezultat").innerHTML = produkty.splice(1, 3, "coś", "test");
+// usuwanie elementów wraz z dodaniem nowych
